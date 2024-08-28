@@ -18,7 +18,7 @@ const zod_1 = require("zod");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 var connection;
-const connectionString = "mysql://avnadmin:AVNS_RqoMX03OxKV2jqcpXYQ@mysql-284f063a-rsounak55-059d.f.aivencloud.com:12419/backend?ssl-mode=REQUIRED";
+const connectionString = process.env.DATABASE_URL;
 //middleware to connect to database
 function connect(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {

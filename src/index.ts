@@ -4,8 +4,7 @@ import { z } from "zod";
 const app = express();
 app.use(express.json());
 var connection: any;
-const connectionString =
-  "mysql://avnadmin:AVNS_RqoMX03OxKV2jqcpXYQ@mysql-284f063a-rsounak55-059d.f.aivencloud.com:12419/backend?ssl-mode=REQUIRED";
+const connectionString =process.env.DATABASE_URL
 //middleware to connect to database
 async function connect(req: Request, res: Response, next: NextFunction) {
   connection = await mysql.createConnection(connectionString);
