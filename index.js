@@ -60,11 +60,11 @@ app.post("/addSchool", connect, (req, res) => __awaiter(void 0, void 0, void 0, 
                 res.json("School added successfully");
             }
             catch (err) {
-                res.json(err);
+                res.json(err.message);
             }
         }
         catch (err) {
-            res.json(err);
+            res.json(err.message);
         }
     }
     else {
