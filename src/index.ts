@@ -71,11 +71,7 @@ app.get("/listSchool", connect, async (req: Request, res: Response) => {
       ) * 6371;
 
     if (dist <= 100) {
-      return {
-        name:item.name,
-        address:item.address,
-        distance:`${dist} kms`
-      }
+      return item;
     }
     else{
         return
